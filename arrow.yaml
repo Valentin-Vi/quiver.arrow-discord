@@ -37,7 +37,7 @@ targets:
           title: "Download Discord"
           url:
             default: "https://discord.com/api/download?platform=osx&format=dmg"
-            linux/amd64: "https://github.com/srevinsaju/discord-appimage/releases/latest/download/discord-latest-x86_64.AppImage"
+            linux/amd64: "https://github.com/srevinsaju/discord-appimage/releases/latest/download/Discord--x86_64.AppImage"
             darwin/amd64: "https://discord.com/api/download?platform=osx&format=dmg"
             darwin/arm64: "https://discord.com/api/download?platform=osx&format=dmg"
             windows/amd64: "https://discord.com/api/download?platform=win&format=exe"
