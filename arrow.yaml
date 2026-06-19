@@ -52,7 +52,7 @@ targets:
           title: "Install Slack"
           command:
             default: "hdiutil attach -quiet -nobrowse -mountpoint /tmp/slack_mount \"${WORKDIR}/slack.dmg\" && cp -R /tmp/slack_mount/Slack.app /Applications/ && hdiutil detach /tmp/slack_mount -quiet && rm -f \"${WORKDIR}/slack.dmg\""
-            linux/amd64: "chmod +x ${WORKDIR}/slack.AppImage && printf '#!/bin/sh\\nAPPIMAGE_EXTRACT_AND_RUN=1 exec \"%s\" \"$@\"\\n' '${WORKDIR}/slack.AppImage' > /usr/local/bin/slack && chmod +x /usr/local/bin/slack"
+            linux/amd64: "chmod +x ${WORKDIR}/slack.AppImage && mkdir -p ~/.local/bin && printf '#!/bin/sh\\nAPPIMAGE_EXTRACT_AND_RUN=1 exec \"%s\" \"$@\"\\n' '${WORKDIR}/slack.AppImage' > ~/.local/bin/slack && chmod +x ~/.local/bin/slack"
             windows/amd64: "Start-Process -Wait \"${WORKDIR}\\slack-installer.exe\" -ArgumentList '-s'; Remove-Item \"${WORKDIR}\\slack-installer.exe\""
 
       uninstall:
